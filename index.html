@@ -1,0 +1,81 @@
+ 
+
+<!-- Сайт розроблено студентом Борковським Денисом Олександровичем, група 5-9 М.У.Б. --> 
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>powder - Квіти та подарунки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">powder 💐</div>
+        <nav>
+            <a href="#home" class="nav-link" data-section="home">Головна</a>
+            <a href="#gallery" class="nav-link" data-section="gallery">Галерея</a>
+            <a href="#delivery" class="nav-link" data-section="delivery">Доставка та Оплата</a>
+            <a href="#contacts" class="nav-link" data-section="contacts">Контакти</a>
+            <a href="#cart" class="nav-link cart-icon" data-section="cart">🛒 Кошик (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active-section">
+            <h1>Ласкаво просимо до powder!</h1>
+            <p>Ми створюємо щастя у вигляді квітів і подарунків 🌷</p>
+            <button onclick="document.querySelector('#gallery').scrollIntoView({behavior:'smooth'});">
+                Переглянути товари
+            </button>
+        </section>
+
+        <section id="gallery" class="hidden-section">
+            <h2>🌸 Наша Галерея</h2>
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">Усі</button>
+                <button class="filter-btn" data-category="bouquets">Букети</button>
+                <button class="filter-btn" data-category="gifts">Подарунки</button>
+                <button class="filter-btn" data-category="single">Квіти поштучно</button>
+                <button class="filter-btn" data-category="cards">Листівки</button>
+                <button class="filter-btn" data-category="sweets">Цукерки</button>
+            </div>
+            <div id="products-container" class="product-grid"></div>
+        </section>
+
+        <section id="cart" class="hidden-section">
+            <h2>🛒 Ваш Кошик</h2>
+            <div id="cart-items">
+                <p id="empty-cart-message">Ваш кошик порожній.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Підсумкова сума: <span id="total-amount">0.00</span> грн</p>
+                <button id="checkout-btn">Оформити замовлення</button>
+            </div>
+        </section>
+
+        <section id="delivery" class="hidden-section">
+            <h2>🚚 Доставка та Оплата</h2>
+            <ul>
+                <li>Кур’єрська доставка 24/7 у межах міста.</li>
+                <li>Безкоштовна доставка при замовленні від 1000 грн.</li>
+                <li>Оплата карткою Visa/MasterCard або готівкою кур’єру.</li>
+            </ul>
+        </section>
+
+        <section id="contacts" class="hidden-section">
+            <h2>📞 Контакти</h2>
+            <p><b>Телефон:</b> +38 (097) 354-44-70</p>
+            <p><b>Email:</b> info@powder.ua</p>
+            <p><b>Адреса:</b> м. Київ, вул. Варшавська, 23</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Floris. Розробив: Борковський Денис, група 5-9з, МУБ</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
